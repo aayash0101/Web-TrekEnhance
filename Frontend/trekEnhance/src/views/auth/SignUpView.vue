@@ -87,5 +87,18 @@ export default {
   outline: none;
 }
 
+.sign-up-form button {
+  background-color: #2ecc71;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
+.sign-up-form button:hover {
+  background-color: #27ae60;
+}
 </style>
