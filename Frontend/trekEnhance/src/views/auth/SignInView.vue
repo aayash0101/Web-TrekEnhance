@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'SignInView',
   data() {
@@ -32,6 +33,17 @@ export default {
       }
     };
   },
+   mounted() {
+    // This runs when the component is mounted
+    axios.get('http://localhost:8080/api/treks')
+      .then(response => {
+        this.treks = response.data; // Save data to local variable
+      })
+      .catch(error => {
+        console.error('Failed to fetch treks:', error);
+      });
+  },
+
   methods: {
     submitForm() {
       if (!this.form.email || !this.form.password) {
