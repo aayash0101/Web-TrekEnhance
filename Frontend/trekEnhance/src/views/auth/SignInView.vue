@@ -33,7 +33,16 @@ export default {
       }
     };
   },
-  
+   mounted() {
+    // This runs when the component is mounted
+    axios.get('http://localhost:8080/api/treks')
+      .then(response => {
+        this.treks = response.data; // Save data to local variable
+      })
+      .catch(error => {
+        console.error('Failed to fetch treks:', error);
+      });
+  },
 
   methods: {
     submitForm() {
@@ -119,5 +128,15 @@ export default {
   background-color: #2980b9;
 }
 
+.signup-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
 
+.signup-link a {
+  color: #3ed348;
+  text-decoration: none;
+  font-weight: bold;
+}
 </style>
