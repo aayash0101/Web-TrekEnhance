@@ -128,15 +128,5 @@ export default {
   background-color: #2980b9;
 }
 
-.signup-link {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
 
-.signup-link a {
-  color: #3ed348;
-  text-decoration: none;
-  font-weight: bold;
-}
 </style>
